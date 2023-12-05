@@ -1,7 +1,7 @@
 from djitellopy import TelloSwarm
 import time
 
-swarm = TelloSwarm.fromFile("swarmUnico.txt")
+swarm = TelloSwarm.fromFile("ips/swarmUnico.txt")
 
 swarm.connect()
 swarm.takeoff()
