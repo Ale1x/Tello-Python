@@ -4,7 +4,7 @@ import time
 
 # Carica gli indirizzi IP da file
 swarm1 = TelloSwarm.fromFile("ips/swarmUno.txt")
-swarm2 = TelloSwarm.fromFile("ips/swarmDueg.txt")
+swarm2 = TelloSwarm.fromFile("ips/swarmDue.txt")
 
 # Creare una barriera per sincronizzare i due thread
 barrier = threading.Barrier(2)
