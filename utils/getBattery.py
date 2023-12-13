@@ -1,6 +1,6 @@
 from djitellopy import TelloSwarm
 
-swarm = TelloSwarm.fromFile("ips/swarmUnDrone.txt")
+swarm = TelloSwarm.fromFile("ips/swarmUnico.txt")
 
 swarm.connect()
 swarm.parallel(lambda i, tello: print(tello.get_battery()))
