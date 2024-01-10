@@ -12,17 +12,18 @@ swarm.move_up(100) #^f
 time.sleep(3)
 
 swarm.parallel(lambda i, tello: 
-    tello.move_up(50) if i in [0, 4] else
-    tello.move_up(100) if i in [1, 3] else
-    tello.move_up(150) if i in [2, 5] else
+    tello.move_up(50) if i in [0, 4] else # 2 e 11
+    tello.move_up(100) if i in [1, 3] else # 9 e 13
+    tello.move_up(150) if i in [2, 5] else # 8 e 16
     None
 )
 
 time.sleep(3)
 
 swarm.parallel(lambda i, tello: 
-    tello.move_up(100) if i in [0, 4] else
-    tello.move_down(100) if i in [2, 5] else
+    tello.move_up(120) if i in [0, 4] else
+    tello.move_up(20) if i in [1, 3] else
+    tello.move_down(80) if i in [2, 5] else
     None
 )
 
@@ -37,8 +38,9 @@ swarm.parallel(lambda i, tello:
 
 time.sleep(3)
 swarm.parallel(lambda i, tello: 
-    tello.move_up(100) if i in [0, 4] else
-    tello.move_up(100) if i in [2, 5] else
+    tello.move_up(80) if i in [0, 4] else
+    tello.move_down(20) if i in [1, 3] else
+    tello.move_up(80) if i in [2, 5] else
     None
 )
 time.sleep(3)
@@ -54,7 +56,7 @@ swarm.move_right(120) #>
 time.sleep(1)
 swarm.parallel(lambda i, tello: tello.move_up(50) if i in [0, 1, 2] else tello.move_down(50))
 time.sleep(1)
-swarm.parallel(lambda i, tello: print(tello.get_battery()))
+#swarm.parallel(lambda i, tello: print(tello.get_battery()))
 swarm.parallel(lambda i, tello: tello.move_down(50) if i in [0, 1, 2] else tello.move_up(50))
 time.sleep(1)
 swarm.move_left(120)
